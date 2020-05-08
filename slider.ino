@@ -55,7 +55,7 @@ void setup(void){
   
   IPAddress apip = WiFi.softAPIP();
   Serial.println("apip");
-  /* Wait for connection
+  //* Wait for connection
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
@@ -70,7 +70,7 @@ void setup(void){
   if (MDNS.begin("esp8266")) {
     Serial.println("MDNS responder started");
   }
-  */
+  *
   server.on("/", handleRoot);
   server.on("/normal", [](){
     server.send(200, "text/html", webPage);
